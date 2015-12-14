@@ -2,6 +2,18 @@
 
 Sample Code of PictRuby.
 
+### 00_hello
+
+[00_hello.rb](00_hello.rb)
+
+![00_hello](./images/00_hello.jpg)
+
+### 01_input
+
+[01_input.rb](01_input.rb)
+
+![01_input](./images/01_input.jpg)
+
 ### all_filter
 
 [all_filter.rb](all_filter.rb)
