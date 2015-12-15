@@ -6,7 +6,7 @@
 # 2. 地域コードは那覇だと http://weather.livedoor.com/area/forecast/471010 の最後の数字です
 # 3. 実行結果を毎日テキストに記録したりすると楽しいです
 
-CITY = [016010, 130010, 270000, 471010]
+CITY = %w(016010 130010 270000 471010)
 
 def convert
   t = Time.now
