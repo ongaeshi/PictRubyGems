@@ -23,11 +23,10 @@ end
 
 ### 2. Install
 
-1. Tap '+' -> New File: "get_sample" -> OK
-2. Tap "get_sample"
-3. Long tap text area -> Select All -> Paste
-
-Instal DONE.
+1. Tap '+'
+2. New File: "get_sample" -> OK
+3. Tap "get_sample"
+4. Long tap text area -> "Select All" -> "Paste"
 
 ### 3. Run
 
