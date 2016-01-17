@@ -2,8 +2,8 @@
 
 日本語を使ったサンプルコードはこちら。
 
-スクリプトの名前も日本語にしていますが実験的です。
-問題が起きるようならアルファベットに戻します。
+## 'get_sample'スクリプトのインストール
 
+[Install 'get_sample' script](https://github.com/ongaeshi/PictRubyGems/blob/master/README.md#install-get_sample-script)
 
 
