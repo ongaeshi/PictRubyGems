@@ -2,7 +2,7 @@
 
 Sample Code of PictRuby.
 
-## Install 'get_sample' script
+## Install get_sample script
 
 ### 1. Copy below script
 
