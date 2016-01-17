@@ -1,4 +1,7 @@
-# Please return the text or image in the "def convert"
+# # ja/sudden_death
+#
+# ## 概要
+# 突然の死ジェネレータ
 
 def convert
   word = Popup.input("何？")

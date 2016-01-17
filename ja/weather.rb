@@ -1,4 +1,4 @@
-# # ja/天気
+# # ja/weather
 #
 # ## 概要
 # Weather Hacks から今日の天気情報を取得して表示します。
