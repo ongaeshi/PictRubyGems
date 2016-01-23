@@ -1,9 +1,9 @@
-# Please return the Image object in the "def convert"
+# Please return the Image object in the "def main"
 BRIGHT = -40
 CONTRAST = 64
 BORDER_RATE = 0.5
 
-def convert
+def main
   #img = Image.load("sample.jpg")  
   img = Image.pick_from_library
 

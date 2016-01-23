@@ -3,7 +3,7 @@
 # ## 概要
 # 突然の死ジェネレータ
 
-def convert
+def main
   word = Popup.input("何？")
   
   <<EOS

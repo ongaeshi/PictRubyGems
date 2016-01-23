@@ -3,7 +3,7 @@
 # ## 概要
 # アプリやサイトから辞書を引きます
 
-def convert
+def main
   text = Popup.input("word?")
   text = URI.encode_www_form_component(text)
   

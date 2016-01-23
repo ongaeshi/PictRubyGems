@@ -12,7 +12,7 @@ Sample Code of PictRuby.
 # ## Description
 # Show sample code from PictRubyGems
 
-def convert
+def main
   url = "http://raw.githubusercontent.com"
   name = Popup.input "Name?(e.g. 'sepia' or 'ja/heisei')"
   name = URI.encode_www_form_component name

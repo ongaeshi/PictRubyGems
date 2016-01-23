@@ -10,7 +10,7 @@
 
 CITY = %w(016010 130010 270000 471010)
 
-def convert
+def main
   t = Time.now
   date = t.datestr
   

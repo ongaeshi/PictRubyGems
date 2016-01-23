@@ -1,6 +1,6 @@
-# Please return the Image object in the "def convert"
+# Please return the Image object in the "def main"
 
-def convert
+def main
   #img = Image.load("sample.jpg")  
   imgs = Image.pick_from_library(100)
   
