@@ -9,45 +9,51 @@ def main
 
   game = HitAndBlow.new
 
-  stage = 0
-  history = ["????"]
-
   loop do
-    stage += 1
-    
-    msg = <<EOF
-Stage #{stage}
-#{history.join "\n"}
-Please enter 4-digit number.
-EOF
-
-    input = Popup.input(msg.chomp)
+    msg = []
+    msg.push "Stage #{game.stage}"
+    msg.push "????"
+    msg.push game.history.join("\n") if game.history.length > 0 
+    msg.push "Please enter 4-digit number."
+    input = Popup.input(msg.join("\n"))
 
     hit, blow = game.check(input)
     
-    history.push "#{stage}: #{input} [hit:#{hit} blow:#{blow}]"
-
     if hit == 4
-      puts "You win!"
-      puts history.join("\n")
+      puts <<EOF
+You win!
+#{game.history.join("\n")}      
+EOF
       break
     end
   end
 end
 
 class HitAndBlow
+  attr_reader :stage
+  attr_reader :history
+  
   def initialize
     @correct = generate_number
+    @stage = 1
+    @history = []
   end
 
   def check(answer_str)
+    # Convert answer
     answer = answer_str.split("")[0..3].map { |i| i.to_i }
 
+    # Calculate hit & blow
     hit = 0
     (0..3).each { |i| hit += 1 if answer[i] == @correct[i] }
 
     blow = answer.reduce(0) { |t, e| @correct.include?(e) ? t + 1 : t } - hit
 
+    # Record history
+    @history.push "#{@stage}: #{answer_str} [hit:#{hit} blow:#{blow}]"
+    @stage += 1
+
+    # Return value
     [hit, blow]
   end
 
