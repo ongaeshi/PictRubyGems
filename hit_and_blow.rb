@@ -5,7 +5,7 @@
 # Please enter 4-digit number.
 
 def main
-  Popup.msg "Hit & Blow"
+  Popup.msg "Hit & Blow 🔫"
 
   game = HitAndBlow.new
 
