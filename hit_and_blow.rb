@@ -13,11 +13,20 @@ def main
     msg = []
     msg.push "Stage #{game.stage}"
     msg.push "????"
-    # msg.push game.correct_answer
+    # msg.push game.correct_answer # cheat..
     msg.push game.history.join("\n") if game.history.length > 0 
     msg.push "Please enter 4-digit number."
 
     input = Popup.input(msg.join("\n"))
+
+    if input.nil?
+      puts <<EOF
+You lose..
+#{game.correct_answer.join("")}
+#{game.history.join("\n")}
+EOF
+      break
+    end
 
     hit, blow = game.check(input)
     
@@ -25,7 +34,7 @@ def main
       puts <<EOF
 You win!
 #{game.correct_answer.join("")}
-#{game.history.join("\n")}      
+#{game.history.join("\n")}
 EOF
       break
     end
