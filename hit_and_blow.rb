@@ -11,8 +11,8 @@ def main
 
   loop do
     msg = []
-    msg.push "Stage #{game.stage}"
-    msg.push "????"
+    msg.push "🔫 #{game.stage}"
+    msg.push "❓❓❓❓"
     # msg.push game.correct_answer.join("") # cheat..
     msg.push "Please enter 4-digit number."
     msg.push game.history.join("\n") if game.history.length > 0 
