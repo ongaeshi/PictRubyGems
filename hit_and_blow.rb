@@ -7,7 +7,7 @@
 def main
   Popup.msg "Hit & Blow"
 
-  answer = make_answer
+  game = HitAndBlow.new
 
   stage = 0
   history = ["????"]
@@ -22,9 +22,8 @@ Please enter 4-digit number.
 EOF
 
     input = Popup.input(msg.chomp)
-    user = input.split("")[0..3].map { |i| i.to_i }
 
-    hit, blow = check(user, answer)
+    hit, blow = game.check(input)
     
     history.push "#{stage}: #{input} [hit:#{hit} blow:#{blow}]"
 
@@ -36,16 +35,24 @@ EOF
   end
 end
 
-def make_answer
-  list = (0..9).to_a
-  (0..3).map { list.delete_at(rand(list.size-1)) }
-end
+class HitAndBlow
+  def initialize
+    @correct = generate_number
+  end
 
-def check(user, answer)
-  hit = 0
-  (0..3).each { |i| hit += 1 if user[i] == answer[i] }
+  def check(answer_str)
+    answer = answer_str.split("")[0..3].map { |i| i.to_i }
 
-  blow = user.reduce(0) { |t, e| answer.include?(e) ? t + 1 : t } - hit
+    hit = 0
+    (0..3).each { |i| hit += 1 if answer[i] == @correct[i] }
 
-  [hit, blow]
+    blow = answer.reduce(0) { |t, e| @correct.include?(e) ? t + 1 : t } - hit
+
+    [hit, blow]
+  end
+
+  def generate_number
+    list = (0..9).to_a
+    (0..3).map { list.delete_at(rand(list.size-1)) }
+  end
 end
