@@ -7,9 +7,9 @@ def main
   name = Popup.input("Class name?(e.g. Array)\nCancel: Display list")
   
   if name
-    Module.const_get(name).info
+    puts Module.const_get(name).info
   else
-    class_list
+    puts class_list
   end
 end
 

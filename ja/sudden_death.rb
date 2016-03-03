@@ -6,7 +6,7 @@
 def main
   word = Popup.input("何？")
   
-  <<EOS
+  puts <<EOS
 #{header(word)}
 ＞#{word}＜
 #{footer(word)}

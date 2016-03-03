@@ -14,7 +14,7 @@ def main
   t = Time.now
   date = t.datestr
   
-  "#{date} #{t.hour}:#{t.min} の天気\n\n" + 
+  puts "#{date} #{t.hour}:#{t.min} の天気\n\n" + 
   CITY.map { |e|
     LivedoorWeather.new(e).show(date)
   }.join("---\n")

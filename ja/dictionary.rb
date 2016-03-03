@@ -7,7 +7,7 @@ def main
   text = Popup.input("word?")
   text = URI.encode_www_form_component(text)
   
-  <<EOS
+  puts <<EOS
 ウィズダム
 mkwisdom://jp.monokakido.mkwisdom/search?text=#{text}
 

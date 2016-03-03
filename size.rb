@@ -2,7 +2,7 @@
 
 def main
   imgs = Image.pick_from_library(100)
-  imgs.map { |e| e.to_s }
+  puts imgs.map { |e| e.to_s }
 end
 
 class Image
