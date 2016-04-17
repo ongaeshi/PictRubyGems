@@ -58,14 +58,6 @@ class Chat
     "?"
   end
   
-  def timer
-    if @manuscript && @manuscript[@i]
-      txt = @manuscript[@i]
-      @i += 1
-      return txt
-    end
-  end
-
   private
   
   def sitemap
